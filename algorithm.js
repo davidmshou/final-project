@@ -2,15 +2,13 @@ function Card (r, s) {
   this.rank = r;
   this.suit = s;
   this.toHTML = function() {
-    return "<li class='card'>" + this.rank + " " + this.suit + "</li>";
+    return "<li class='card'>" + this.rank + "-" + this.suit + "</li>";
   };
 }
 
 
 function Deck() {
-    var thisDeck = this,
-      $deck = $("#deck"),
-      card;
+    var thisDeck = this;
       this.suits = ["H", "C", "D", "S"];
       this.ranks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 
@@ -24,35 +22,31 @@ function Deck() {
       });
   }
 
-  var deck = new Deck();
+var shuffle = function(m) {
+  var rand, $rand;
 
-/*$("#shuffle").on("click", function() { 
-    var array = new Deck();
-  array.push(Math.floor(Math.random() * 52)); 
-  var n = array.length, t, i;
+  rand = Math.floor(Math.random() * m--);
 
-  while (n) {
-    i = Math.floor(Math.random() * n--);
-    t = array[n];
-    array[n] = array[i];
-    array[i] = t;
+  $("li:eq(" + m + ")").
+    after($("lie:eq(" + rand + ")")).
+    insertBefore($("li:eq(" + rand + ")"))
+    
+  if(m) {
+    setTimeout(shuffle, 100, m);
   }
+};
 
-  return(array);
-  });*/
+var deck = new Deck();
+
+$("#shuffle").on("click", function() {
+  shuffle($(".cards").length);
+});
+
+$("#deshuffle").on("click", function() {
+  location.reload(); 
+});
 
 
-var shuffle = function(array) {
-   
-  var n = array.length, t, i;
 
-  while (n) {
-    i = Math.floor(Math.random() * n--);
-    t = array[n];
-    array[n] = array[i];
-    array[i] = t;
-  }
 
-  return(array);
-}
-console.log(shuffle());
+

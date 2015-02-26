@@ -1,0 +1,11 @@
+.buttons {  
+ display: block;
+ position: relative;
+ left: 56em;
+  }
+#deck { 
+ display: block;
+ text-align: center;
+ position: relative; }
+/** { 
+ border: solid black 2px; }*/
