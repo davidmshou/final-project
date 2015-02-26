@@ -1,11 +1,25 @@
+body {  
+  background-color: beige; }
+.buttons:hover {  
+  cursor: pointer;
+  box-shadow: blue 0 5px; }
 .buttons {  
- display: block;
- position: relative;
- left: 56em;
-  }
+  display: block;
+  position: relative;
+  top: 20em;
+  left: 56em;
+  margin: 1em;
+  border-radius: 1em; }
 #deck { 
- display: block;
- text-align: center;
- position: relative; }
-/** { 
- border: solid black 2px; }*/
+  position: relative;
+  width: 3em;
+  border: solid black 1px; }
+#sdeck {
+  position: relative;
+  left: 80em;
+  width: 3em; }
+li {
+  border: solid black 1px;
+  width: 3em; }
+* { 
+  border: solid black 2px; }
