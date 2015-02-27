@@ -28,7 +28,7 @@ var shuffle = function(m) {
   rand = Math.floor(Math.random() * m--);
 
   $("li:eq(" + m + ")").
-    after($("lie:eq(" + rand + ")")).
+    after($("li:eq(" + rand + ")")).
     insertBefore($("li:eq(" + rand + ")"))
     
   if(m) {
@@ -37,6 +37,7 @@ var shuffle = function(m) {
 };
 
 var deck = new Deck();
+
 
 $("#shuffle").on("click", function() {
   shuffle($(".cards").length);
