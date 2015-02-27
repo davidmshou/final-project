@@ -1,28 +1,39 @@
 body {  
-  background-color: beige; }
+  background-color: beige;
+  border: solid black 2px; }
+body > h1 { 
+  display: block;
+  text-align: center; }
 .buttons:hover {  
   cursor: pointer;
   color: white; }
 .buttons {  
   display: block;
   position: relative;
-  top: 20em;
-  left: 56em;
+  top: 16em;
+  left: 52em;
   margin: 1em;
   border-radius: .5em;
   background-color: teal;
   transition: .5s; }
 #deck { 
   position: relative;
+  background-color:;
   width: 3em; }
 #sdeck {
   position: relative;
-  left: 80em;
-  width: 3em; }
+  left: 69em;
+  width: 3em;
+  color: red; }
 li {
   border: solid black 1px;
   width: 2.5em;
   background-color: white;
   text-align: center; }
+.moveCards {  
+  -webkit-animation: cardShift 2s; }
+
+@-webkit-keyframes cardShift {
+  100% {left: 95%; } }
 /** { 
   border: solid black 2px; }*/

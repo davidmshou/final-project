@@ -40,6 +40,7 @@ var deck = new Deck();
 
 $("#shuffle").on("click", function() {
   shuffle($(".cards").length);
+  $("#deck").appendTo("#sdeck");
 });
 
 $("#deshuffle").on("click", function() {
