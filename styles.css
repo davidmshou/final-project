@@ -16,10 +16,12 @@ body > h1 {
   border-radius: .5em;
   background-color: teal;
   transition: .5s; }
-#deck { 
+#deck {
+  display: block; 
   position: relative;
   background-color:;
-  width: 3em; }
+  width: 3em;
+  transition: .5s; }
 #sdeck {
   position: relative;
   left: 69em;
@@ -31,9 +33,10 @@ li {
   background-color: white;
   text-align: center; }
 .moveCards {  
-  -webkit-animation: cardShift 2s; }
-
+  -webkit-animation: cardShift 6s;
+  -webkit-animation-fill-mode: forwards; }
 @-webkit-keyframes cardShift {
-  100% {left: 95%; } }
+  100% {left: 80%;
+  color: red; } }
 /** { 
   border: solid black 2px; }*/

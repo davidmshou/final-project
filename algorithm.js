@@ -32,7 +32,7 @@ var shuffle = function(m) {
     insertBefore($("li:eq(" + rand + ")"))
     
   if(m) {
-    setTimeout(shuffle, 100, m);
+    setTimeout(shuffle, 25, m);
   }
 };
 
@@ -40,7 +40,8 @@ var deck = new Deck();
 
 $("#shuffle").on("click", function() {
   shuffle($(".cards").length);
-  $("#deck").appendTo("#sdeck");
+  //$("#deck").appendTo("#sdeck");//
+  $("#deck").addClass("moveCards");
 });
 
 $("#deshuffle").on("click", function() {
