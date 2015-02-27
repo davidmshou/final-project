@@ -1,17 +1,29 @@
-body {  
-  background-color: beige;
-  border: solid black 2px; }
+body {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqBC_kKynAjgCOX0ptduS3Ku5XOBXcDWlZE264R8J-qXBO2Vc1");
+  background-size: 50%;  
+  background-color: beige; }
 body > h1 { 
   display: block;
-  text-align: center; }
+  position: relative;
+  text-align: center;
+  top: 2.5em;
+  color: black;
+  background-color: white;
+  border: solid black 1px;
+  margin-left: 10em;
+  margin-right: 10em;
+  font-family: cursive;
+  font-size: 3em; }
 .buttons:hover {  
   cursor: pointer;
   color: white; }
 .buttons {  
   display: block;
   position: relative;
-  top: 16em;
-  left: 52em;
+  font-size: 1em;
+  font-family: cursive;
+  top: 10em;
+  left: 35em;
   margin: 1em;
   border-radius: .5em;
   background-color: teal;
@@ -19,24 +31,18 @@ body > h1 {
 #deck {
   display: block; 
   position: relative;
-  background-color:;
-  width: 3em;
-  transition: .5s; }
-#sdeck {
-  position: relative;
-  left: 69em;
-  width: 3em;
-  color: red; }
+  width: 3em; }
 li {
   border: solid black 1px;
   width: 2.5em;
   background-color: white;
   text-align: center; }
 .moveCards {  
-  -webkit-animation: cardShift 6s;
+  -webkit-animation: cardShift 3s;
   -webkit-animation-fill-mode: forwards; }
 @-webkit-keyframes cardShift {
-  100% {left: 80%;
+  0% {left: 0%;}
+  100% {left: 90%;
   color: red; } }
 /** { 
   border: solid black 2px; }*/

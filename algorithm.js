@@ -8,19 +8,19 @@ function Card (r, s) {
 
 
 function Deck() {
-    var thisDeck = this;
-      this.suits = ["H", "C", "D", "S"];
-      this.ranks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+  var thisDeck = this;
+    this.suits = ["H", "C", "D", "S"];
+    this.ranks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 
-      $.each(thisDeck.suits, function(index, suit) {
-        var suit = this;
-        $.each(thisDeck.ranks, function(index, rank) { 
-          var rank = this;
-          var card = new Card(rank, suit);
-          $("#deck").append(card.toHTML());
-        });
+    $.each(thisDeck.suits, function(index, suit) {
+      var suit = this;
+      $.each(thisDeck.ranks, function(index, rank) { 
+        var rank = this;
+        var card = new Card(rank, suit);
+        $("#deck").append(card.toHTML());
       });
-  }
+    });
+}
 
 var shuffle = function(m) {
   var rand, $rand;
@@ -32,7 +32,7 @@ var shuffle = function(m) {
     insertBefore($("li:eq(" + rand + ")"))
     
   if(m) {
-    setTimeout(shuffle, 25, m);
+    setTimeout(shuffle, 50, m);
   }
 };
 
@@ -40,15 +40,10 @@ var deck = new Deck();
 
 $("#shuffle").on("click", function() {
   shuffle($(".cards").length);
-  //$("#deck").appendTo("#sdeck");//
   $("#deck").addClass("moveCards");
 });
 
 $("#deshuffle").on("click", function() {
   location.reload(); 
 });
-
-
-
-
 
