@@ -127,19 +127,19 @@ $("#shuffle").on("click", function() {
 
 
 $("#deshuffle").on("click", function() {
-  for (var i = 0, j; i < ($(".card").length); i++) {
+  for (var i = 0, j; i < $(".card")[i].length; i++) {
 
-   var temp = ($(".card[i]"));
+   var temp = $(".card")[i];
 
-   for (j =i-1; j>=0 && ($(".card.get[j]")) > temp; j--){
-     ($(".card.get[j+1]")) = ($(".card.get[j]"));
+   for (j = i - 1; j >= 0 && $(".card").get[j] > temp; j--){
+     $(".card").get[j+1] = $(".card").get[j];
 
      ($('li:eq(' + j + ')')).
      before($('li:eq(' + i + ')')).
      after($('li:eq(' + i + ')'));
 
-   }
-   ($(".card.get[j+1]")) = temp;
+  }
+   $(".card").get[j+1] = temp;
  }
 });
 
