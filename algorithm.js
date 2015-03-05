@@ -126,10 +126,13 @@ $("#shuffle").on("click", function() {
 });
 
 
-$("#deshuffle").on("click", function() {
-  for (var i = 0, j; i < $(".card")[i].length; i++) {
+/*$("#deshuffle").on("click", function() {
+  for (var i = 0, j; i < $(".card").length; i++) {
 
-   var temp = $(".card")[i];
+   var temp = $(".card").get(i);
+   console.log(temp);
+   $('li:eq('H')').after($('li:eq('C')')).insertBefore($('li:eq('C')')
+
 
    for (j = i - 1; j >= 0 && $(".card").get[j] > temp; j--){
      $(".card").get[j+1] = $(".card").get[j];
@@ -137,15 +140,15 @@ $("#deshuffle").on("click", function() {
      ($('li:eq(' + j + ')')).
      before($('li:eq(' + i + ')')).
      after($('li:eq(' + i + ')'));
-
+    
   }
    $(".card").get[j+1] = temp;
  }
-});
-
-
-
-/*$("#deshuffle").on("click", function() {
-  location.reload(); 
 });*/
+
+
+
+$("#deshuffle").on("click", function() {
+  location.reload(); 
+});
 
